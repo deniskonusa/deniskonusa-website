@@ -5,7 +5,7 @@
   <title>Denis Konusa — Brand Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A complete brand. Delivered in 14 days. Strategy, naming, logo, visual system, social templates, presentation, website, and brand guidelines — all in one sprint, at one fixed price.">
-  <link rel="stylesheet" href="css/styles.css?v=20260507i">
+  <link rel="stylesheet" href="css/styles.css?v=20260507j">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -211,62 +211,58 @@
 
   <!-- Process / Timeline -->
   <section class="process" id="process">
-    <header class="section-head">
-      <h2 class="section-headline">14 days. A clear route.</h2>
-      <p class="section-sub">No endless revisions. Every day has a defined deliverable and a clear outcome.</p>
+    <header class="process-head">
+      <h2 class="process-headline">14 days. A clear route.</h2>
+      <p class="process-sub">No endless revisions. Every day has a defined deliverable and a clear outcome.</p>
     </header>
 
-    <ol class="process-list">
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Days 1–2 · Discovery</div>
-          <div class="process-title">Brief, kickoff, positioning.</div>
+    <div class="process-grid">
+
+      <div class="process-card" style="--i:0">
+        <span class="process-card-day">Days 1–2 · Discovery</span>
+        <h3 class="process-card-title">Brief, kickoff, positioning.</h3>
+        <p class="process-card-desc">Brief, kickoff call, market and competitor analysis. Positioning and audience locked in. Naming — if included in the package.</p>
+      </div>
+
+      <div class="process-card" style="--i:1">
+        <span class="process-card-day">Days 3–4 · Visual Concepts</span>
+        <h3 class="process-card-title">Three directions, one chosen.</h3>
+        <p class="process-card-desc">3 distinct visual directions — mood, character, aesthetic. You choose one. That becomes the foundation.</p>
+      </div>
+
+      <div class="process-card" style="--i:2">
+        <span class="process-card-day">Day 5 · Direction Locked</span>
+        <h3 class="process-card-title">Final concept approved.</h3>
+        <p class="process-card-desc">From this point forward, focus shifts fully to execution. No U-turns.</p>
+      </div>
+
+      <div class="process-card" style="--i:3">
+        <span class="process-card-day">Days 6–8 · Identity Build</span>
+        <h3 class="process-card-title">Full visual identity.</h3>
+        <p class="process-card-desc">Logo system, color palette, typography, patterns. Full visual identity assembled and polished.</p>
+      </div>
+
+      <div class="process-card" style="--i:4">
+        <span class="process-card-day">Days 9–10 · Collateral &amp; Templates</span>
+        <h3 class="process-card-title">Social and presentation built.</h3>
+        <p class="process-card-desc">Social media templates and presentation deck built and adapted to the system.</p>
+      </div>
+
+      <div class="process-card" style="--i:5">
+        <span class="process-card-day">Days 11–13 · Website</span>
+        <h3 class="process-card-title">Designed and developed.</h3>
+        <p class="process-card-desc">Design and development of the branded website — up to 6 pages, ready to go live.</p>
+      </div>
+
+      <div class="process-card process-card--final" style="--i:6">
+        <div class="process-card-final-left">
+          <span class="process-card-day">Day 14 · Delivery</span>
+          <h3 class="process-card-title">Complete package handed over.</h3>
         </div>
-        <p class="process-body">Brief, kickoff call, market and competitor analysis. Positioning and audience locked in. Naming — if included in the package.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Days 3–4 · Visual Concepts</div>
-          <div class="process-title">Three directions, one chosen.</div>
-        </div>
-        <p class="process-body">3 distinct visual directions presented — mood, character, aesthetic. You choose one. That becomes the foundation.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Day 5 · Direction Locked</div>
-          <div class="process-title">Final concept approved.</div>
-        </div>
-        <p class="process-body">Final concept approved. From this point forward, focus shifts fully to execution. No U-turns.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Days 6–8 · Identity Build</div>
-          <div class="process-title">Full visual identity.</div>
-        </div>
-        <p class="process-body">Logo system, color palette, typography, patterns. Full visual identity assembled and polished.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Days 9–10 · Collateral &amp; Templates</div>
-          <div class="process-title">Social and presentation built.</div>
-        </div>
-        <p class="process-body">Social media templates and presentation deck built and adapted to the system.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Days 11–13 · Website</div>
-          <div class="process-title">Designed and developed.</div>
-        </div>
-        <p class="process-body">Design and development of the branded website — up to 6 pages, ready to go live.</p>
-      </li>
-      <li class="process-step">
-        <div class="process-meta">
-          <div class="process-day">Day 14 · Delivery</div>
-          <div class="process-title">Complete package handed over.</div>
-        </div>
-        <p class="process-body">Online brand book, master Figma file, all exported assets. Complete package handed over. You're ready to launch.</p>
-      </li>
-    </ol>
+        <p class="process-card-desc">Online brand book, master Figma file, all exported assets. Complete package handed over. You're ready to launch.</p>
+      </div>
+
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -378,6 +374,7 @@
 </footer>
 
 <script>
+  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = btn.closest('.faq-item');
@@ -392,6 +389,24 @@
       }
     });
   });
+
+  // Process cards — staggered reveal on scroll
+  (function() {
+    var section = document.querySelector('.process');
+    if (!section || !window.IntersectionObserver) {
+      if (section) section.classList.add('process--visible');
+      return;
+    }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          section.classList.add('process--visible');
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    io.observe(section);
+  })();
 </script>
 </body>
 </html>
