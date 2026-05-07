@@ -566,16 +566,16 @@ a { text-decoration: none; }
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
   background: var(--color-primary);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 280ms var(--ease);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 320ms var(--ease);
 }
 .deliverable:hover { background: var(--color-surface); }
-.deliverable:hover::before { transform: scaleY(1); }
+.deliverable:hover::before { transform: scaleX(1); }
 
 .deliverable-num {
   font-size: 11px;
