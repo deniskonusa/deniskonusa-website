@@ -125,7 +125,13 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 30px 0;
+  padding: 18px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
 }
 
 .nav-logo {
@@ -160,7 +166,7 @@ a { text-decoration: none; }
   transform-origin: left;
   transition: transform var(--dur-base) var(--ease);
 }
-.nav-links a:hover { color: var(--color-ink); }
+.nav-links a:hover { color: var(--color-primary); }
 .nav-links a:hover::after { transform: scaleX(1); }
 
 /* ── Buttons ──────────────────────────────────────────────── */
