@@ -314,10 +314,8 @@ a { text-decoration: none; }
 
 .value-icon {
   width: 45px;
-  height: 49px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 45px;
+  object-fit: contain;
 }
 
 .value-title {
