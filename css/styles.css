@@ -1,0 +1,463 @@
+/* ─────────────────────────────────────────────────────────────
+   Konusa Design System — Tokens + Styles
+   Brand & communications design by Denis Konusa
+   ───────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Italic-VariableFont_opsz_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ── Primary (Brand Green) ───────────────────────────────── */
+  --color-primary:       #35A86A;
+  --color-primary-light: #61EAA0;
+  --color-primary-tint:  #E8F7EF;
+
+  /* ── Neutrals ────────────────────────────────────────────── */
+  --color-ink:           #363131;
+  --color-ink-deep:      #161616;
+  --color-ink-strong:    #0F0F0F;
+  --color-mute:          #6B6B6B;
+  --color-mute-soft:     #888787;
+  --color-line:          #D9D7D7;
+  --color-surface:       #F5F5F4;
+  --color-surface-2:     #F9F9F9;
+  --color-bg:            #FFFFFF;
+  --color-bg-dark:       #161616;
+
+  /* ── Semantic (client project accents) ──────────────────── */
+  --color-anazana-blue:  #4EA6FF;
+  --color-a17-teal:      #082C2D;
+  --color-signal-coal:   #201E1E;
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --tracking:     -0.05em;
+
+  --fs-hero:    80px;
+  --fs-h1:      50px;
+  --fs-h2:      24px;
+  --fs-h3:      20px;
+  --fs-btn:     18px;
+  --fs-body:    16px;
+  --fs-caption: 14px;
+
+  --lh-tight: 1;
+  --lh-snug:  1.15;
+  --lh-body:  1.5;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-7:  30px;
+  --s-8:  40px;
+  --s-9:  60px;
+  --s-10: 80px;
+  --s-11: 120px;
+
+  /* ── Radii ───────────────────────────────────────────────── */
+  --radius-sm:   5px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-pill: 999px;
+
+  /* ── Elevation ───────────────────────────────────────────── */
+  --shadow-sm:   0 1px 2px rgba(22, 22, 22, 0.06);
+  --shadow-md:   0 6px 24px rgba(22, 22, 22, 0.08);
+  --shadow-glow: 0 0 171px rgba(255, 255, 255, 0.25);
+
+  /* ── Motion ──────────────────────────────────────────────── */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* ── Reset & base ─────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  letter-spacing: var(--tracking);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+
+/* ── Page shell ───────────────────────────────────────────── */
+
+.page {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── Nav ──────────────────────────────────────────────────── */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px 0;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-logo-sym  { height: 48px; width: auto; }
+.nav-logo-word { height: 23px; width: auto; }
+
+.nav-links {
+  display: flex;
+  gap: var(--s-4);
+  list-style: none;
+}
+.nav-links a {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  color: var(--color-mute);
+  line-height: var(--lh-body);
+  transition: color var(--dur-base) var(--ease);
+}
+.nav-links a:hover { color: var(--color-ink); }
+
+/* ── Buttons ──────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 67px;
+  padding: 20px 30px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-btn);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background var(--dur-base) var(--ease),
+    color var(--dur-base) var(--ease),
+    border-color var(--dur-base) var(--ease),
+    transform var(--dur-fast) var(--ease);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.btn-primary:hover  { background: #2E9A5F; border-color: #2E9A5F; }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline:hover  { background: var(--color-primary-tint); }
+.btn-outline:active { transform: scale(0.98); }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+
+.hero {
+  padding: 60px 30px 0;
+}
+
+.hero-headline {
+  font-size: var(--fs-hero);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking);
+  color: var(--color-ink);
+  max-width: 845px;
+  margin: 30px 0 30px;
+  text-wrap: balance;
+}
+
+.hero-sub {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking);
+  color: var(--color-mute);
+  max-width: 623px;
+  margin-bottom: 60px;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  height: 115px;
+}
+
+.hero-portrait {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 5.227px solid #C6C5C5;
+  box-shadow: var(--shadow-glow);
+  background: var(--color-surface) center/cover no-repeat;
+}
+
+.hero-byline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero-name {
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  color: var(--color-ink);
+  line-height: var(--lh-tight);
+}
+.hero-role {
+  font-size: var(--fs-body);
+  font-weight: 400;
+  letter-spacing: var(--tracking);
+  color: var(--color-mute);
+  line-height: var(--lh-body);
+}
+
+.hero-image {
+  margin: 80px 0 0;
+  width: 1380px;
+  height: 678px;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 1380px;
+  transform: translateY(-585px);
+}
+
+/* ── Section intro ────────────────────────────────────────── */
+
+.intro {
+  padding: 120px 30px 60px;
+  max-width: 700px;
+}
+
+.intro-eyebrow {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  color: var(--color-mute);
+  line-height: var(--lh-body);
+  margin-bottom: 12px;
+}
+
+.intro-body {
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: 1.05;
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+
+/* ── Value cards ──────────────────────────────────────────── */
+
+.values {
+  padding: 0 30px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4);
+}
+
+.value-card {
+  background: var(--color-surface);
+  padding: 20px 30px 20px 20px;
+  min-height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.value-card.alt { background: var(--color-surface-2); }
+
+.value-icon {
+  width: 45px;
+  height: 49px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.value-title {
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
+  margin-bottom: 20px;
+}
+
+.value-body {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-body);
+  color: var(--color-mute);
+}
+
+/* ── Project grid ─────────────────────────────────────────── */
+
+.projects {
+  padding: 60px 30px 120px;
+}
+
+.projects-head {
+  display: flex;
+  gap: var(--s-9);
+  align-items: baseline;
+  margin-bottom: var(--s-8);
+}
+
+.projects-headline {
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+
+.projects-sub {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-body);
+  color: var(--color-mute);
+  max-width: 480px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 60px;
+}
+
+.project-art {
+  aspect-ratio: 685 / 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-meta {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-name {
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-tight);
+  color: var(--color-ink);
+}
+
+.project-scope {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  line-height: var(--lh-body);
+  color: var(--color-mute);
+}
+
+/* ── Client lockups inside project tiles ─────────────────── */
+
+.lumo-lockup {
+  position: relative;
+  width: 250px;
+  height: 82px;
+}
+.lumo-mark { position: absolute; left: 0;    top: 0;   width: 47px;  height: 82px; }
+.lumo-word { position: absolute; left: 68px; top: 16px; width: 166px; height: 49px; }
+.lumo-c    { position: absolute; left: 238px; top: 24px; width: 12px; height: 12px; }
+
+.a17-lockup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+}
+.a17-lockup img { width: 154px; height: 60px; }
+.a17-mini {
+  font-size: 11px;
+  line-height: 1.1;
+  white-space: pre;
+  font-weight: 500;
+  color: #fff;
+}
+
+.anazana-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 46px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.signal-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  letter-spacing: -0.09em;
+  line-height: 0.8;
+}
+.signal-mark {
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.signal-mark img { width: 24px; height: 32px; }
