@@ -759,13 +759,13 @@ a { text-decoration: none; }
 }
 
 .footer-cta-headline {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-hero);
   font-weight: 500;
   letter-spacing: var(--tracking);
   line-height: var(--lh-tight);
   color: #fff;
-  max-width: 800px;
-  margin: 0 0 24px;
+  max-width: 845px;
+  margin: 0 0 30px;
   text-wrap: balance;
 }
 
