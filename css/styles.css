@@ -234,7 +234,15 @@ a { text-decoration: none; }
   border-radius: 50%;
   border: 5.227px solid #C6C5C5;
   box-shadow: var(--shadow-glow);
-  background: var(--color-surface) center/cover no-repeat;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .hero-byline {
@@ -314,10 +322,8 @@ a { text-decoration: none; }
 
 .value-icon {
   width: 45px;
-  height: 49px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 45px;
+  object-fit: contain;
 }
 
 .value-title {
