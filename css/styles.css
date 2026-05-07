@@ -132,7 +132,7 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
 }
-.nav-logo-word { height: 32px; width: auto; }
+.nav-logo-word { height: 44px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -292,16 +292,10 @@ a { text-decoration: none; }
 
 .intro {
   padding: 120px 30px 60px;
-  max-width: 700px;
-}
-
-.intro-eyebrow {
-  font-size: var(--fs-body);
-  font-weight: 500;
-  letter-spacing: var(--tracking);
-  color: var(--color-mute);
-  line-height: var(--lh-body);
-  margin-bottom: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro-body {
@@ -311,6 +305,16 @@ a { text-decoration: none; }
   line-height: 1.05;
   color: var(--color-ink);
   text-wrap: balance;
+  margin-bottom: 20px;
+}
+
+.intro-eyebrow {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  letter-spacing: var(--tracking);
+  color: var(--color-mute);
+  line-height: var(--lh-body);
+  max-width: 560px;
 }
 
 /* ── Value cards ──────────────────────────────────────────── */
@@ -363,8 +367,10 @@ a { text-decoration: none; }
 
 .projects-head {
   display: flex;
-  gap: var(--s-9);
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
   margin-bottom: var(--s-8);
 }
 
@@ -374,7 +380,6 @@ a { text-decoration: none; }
   letter-spacing: var(--tracking);
   line-height: var(--lh-tight);
   color: var(--color-ink);
-  flex-shrink: 0;
 }
 
 .projects-sub {
@@ -774,7 +779,7 @@ a { text-decoration: none; }
   margin: 0 30px;
 }
 .footer-logo { display: flex; align-items: center; }
-.footer-logo img { height: 28px; width: auto; }
+.footer-logo img { height: 36px; width: auto; }
 .footer-meta {
   font-size: var(--fs-caption);
   font-weight: 500;
