@@ -132,7 +132,7 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
 }
-.nav-logo-word { height: 23px; width: auto; }
+.nav-logo-word { height: 36px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -736,7 +736,7 @@ a { text-decoration: none; }
   margin: 0 30px;
 }
 .footer-logo { display: flex; align-items: center; }
-.footer-logo img { height: 18px; width: auto; }
+.footer-logo img { height: 28px; width: auto; }
 .footer-meta {
   font-size: var(--fs-caption);
   font-weight: 500;
