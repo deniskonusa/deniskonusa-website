@@ -132,7 +132,7 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
 }
-.nav-logo-word { height: 36px; width: auto; }
+.nav-logo-word { height: 170px; width: auto; }
 
 .nav-links {
   display: flex;
