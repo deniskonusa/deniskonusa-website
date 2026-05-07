@@ -754,7 +754,7 @@ a { text-decoration: none; }
 }
 
 .footer-cta {
-  text-align: center;
+  text-align: left;
   padding-bottom: 120px;
 }
 
@@ -765,7 +765,7 @@ a { text-decoration: none; }
   line-height: var(--lh-tight);
   color: #fff;
   max-width: 800px;
-  margin: 0 auto 24px;
+  margin: 0 0 24px;
   text-wrap: balance;
 }
 
@@ -776,7 +776,7 @@ a { text-decoration: none; }
   line-height: var(--lh-snug);
   color: #B8B8B8;
   max-width: 640px;
-  margin: 0 auto 60px;
+  margin: 0 0 60px;
   text-wrap: balance;
 }
 
