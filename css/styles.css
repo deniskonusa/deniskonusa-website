@@ -145,9 +145,23 @@ a { text-decoration: none; }
   letter-spacing: var(--tracking);
   color: var(--color-mute);
   line-height: var(--lh-body);
+  position: relative;
   transition: color var(--dur-base) var(--ease);
 }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background: #35A86A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-base) var(--ease);
+}
 .nav-links a:hover { color: var(--color-ink); }
+.nav-links a:hover::after { transform: scaleX(1); }
 
 /* ── Buttons ──────────────────────────────────────────────── */
 
