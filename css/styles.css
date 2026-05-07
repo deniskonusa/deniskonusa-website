@@ -515,50 +515,73 @@ a { text-decoration: none; }
   padding: 120px 0 60px;
 }
 
-.pricing-meta {
+.pricing-terms {
   display: flex;
-  gap: var(--s-9);
-  padding: 0 30px var(--s-8);
-  border-bottom: 1px solid var(--color-line);
+  align-items: center;
+  gap: 20px;
   margin: 0 30px var(--s-9);
-}
-.pricing-meta-item {
-  font-size: var(--fs-h3);
-  font-weight: 500;
-  letter-spacing: var(--tracking);
-  line-height: var(--lh-tight);
-  color: var(--color-ink);
-}
-.pricing-meta-item span {
-  display: block;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
   font-size: var(--fs-caption);
-  color: var(--color-mute-soft);
-  margin-top: 8px;
   font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-mute-soft);
+}
+.pricing-terms-sep {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: var(--color-line);
+  flex-shrink: 0;
 }
 
 .deliverables {
   padding: 0 30px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--s-4);
+  list-style: none;
+  border-top: 1px solid var(--color-line);
 }
 
 .deliverable {
-  background: var(--color-surface);
-  padding: 30px 20px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-3);
+  display: grid;
+  grid-template-columns: 48px minmax(200px, 300px) 1fr;
+  gap: 0 60px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-line);
+  align-items: baseline;
+  position: relative;
+  cursor: default;
+  transition: background var(--dur-base) var(--ease);
 }
-.deliverable.alt { background: var(--color-surface-2); }
+.deliverable::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 280ms var(--ease);
+}
+.deliverable:hover { background: var(--color-surface); }
+.deliverable:hover::before { transform: scaleY(1); }
 
+.deliverable-num {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-mute-soft);
+  align-self: start;
+  padding-top: 3px;
+}
 .deliverable-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--s-2);
+  gap: var(--s-3);
 }
 .deliverable-title {
   font-size: var(--fs-h3);
@@ -577,6 +600,7 @@ a { text-decoration: none; }
   background: var(--color-primary-tint);
   border-radius: var(--radius-sm);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .deliverable-body {
   font-size: var(--fs-body);
@@ -827,15 +851,15 @@ a { text-decoration: none; }
   .section-head { padding: 0 24px; flex-direction: column; gap: 16px; align-items: flex-start; }
 
   .pricing  { padding: 80px 0 40px; }
-  .pricing-meta {
-    margin: 0 24px 40px;
-    padding: 0 0 24px;
-    gap: 32px;
-    flex-wrap: wrap;
+  .pricing-terms { margin: 0 24px var(--s-8); }
+  .deliverables { padding: 0 24px; }
+  .deliverable {
+    grid-template-columns: 40px 1fr;
+    gap: 0 32px;
   }
-  .deliverables {
-    padding: 0 24px;
-    grid-template-columns: repeat(2, 1fr);
+  .deliverable-body {
+    grid-column: 2 / -1;
+    padding-top: 8px;
   }
 
   .process  { padding: 80px 0 40px; }
@@ -943,18 +967,25 @@ a { text-decoration: none; }
   /* Pricing */
   .pricing { padding: 60px 0 32px; }
   .section-head { padding: 0 20px; }
-  .pricing-meta {
+  .pricing-terms {
     margin: 0 20px 32px;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+    padding: 16px 0;
   }
-  .pricing-meta-item { font-size: 16px; }
-  .deliverables {
-    padding: 0 20px;
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .pricing-terms-sep { width: 24px; height: 1px; }
+  .deliverables { padding: 0 20px; }
+  .deliverable {
+    grid-template-columns: 36px 1fr;
+    gap: 0 20px;
+    padding: 22px 0;
   }
-  .deliverable { padding: 24px 20px; min-height: 0; }
+  .deliverable-body {
+    grid-column: 2 / -1;
+    padding-top: 6px;
+  }
 
   /* Process */
   .process { padding: 60px 0 32px; }
