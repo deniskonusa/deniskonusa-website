@@ -674,7 +674,10 @@ a { text-decoration: none; }
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: flex 520ms cubic-bezier(.16, 1, .3, 1);
+  background: #fff;
+  transition: flex 520ms cubic-bezier(.16, 1, .3, 1),
+              background-color 520ms cubic-bezier(.16, 1, .3, 1),
+              border-color 520ms cubic-bezier(.16, 1, .3, 1);
 }
 
 .process-panel:last-child {
@@ -683,6 +686,24 @@ a { text-decoration: none; }
 
 .process-panel.is-active {
   flex: 5;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.process-panel.is-active .process-panel-num {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.process-panel.is-active .process-panel-day {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.process-panel.is-active .process-panel-title {
+  color: #fff;
+}
+
+.process-panel.is-active .process-panel-desc {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* Step number — always at top-left */
