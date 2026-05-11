@@ -5,7 +5,7 @@
   <title>Denis Konusa — Brand Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A complete brand. Delivered in 14 days. Strategy, naming, logo, visual system, social templates, presentation, website, and brand guidelines — all in one sprint, at one fixed price.">
-  <link rel="stylesheet" href="css/styles.css?v=20260507m">
+  <link rel="stylesheet" href="css/styles.css?v=20260507n">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -28,7 +28,35 @@
         <li><a href="#faq">faq</a></li>
       </ul>
     </nav>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-burger-bar"></span>
+      <span class="nav-burger-bar"></span>
+      <span class="nav-burger-bar"></span>
+    </button>
   </header>
+
+  <!-- Mobile fullscreen menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav aria-label="Mobile primary">
+        <ul class="mobile-nav-links">
+          <li style="--i:0"><a href="#about" class="mobile-nav-link">about</a></li>
+          <li style="--i:1"><a href="#projects" class="mobile-nav-link">projects</a></li>
+          <li style="--i:2"><a href="#pricing" class="mobile-nav-link">pricing</a></li>
+          <li style="--i:3"><a href="#process" class="mobile-nav-link">process</a></li>
+          <li style="--i:4"><a href="#faq" class="mobile-nav-link">faq</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-bottom">
+        <div class="mobile-social">
+          <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://www.linkedin.com/in/denis-konusa-873605304/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/deniskonusa" target="_blank" rel="noopener noreferrer">Behance</a>
+        </div>
+        <a href="mailto:hello@deniskonusa.com" class="btn btn-primary">get in touch</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero">
@@ -400,6 +428,36 @@
 </footer>
 
 <script>
+  // Mobile hamburger menu
+  (function() {
+    var burger = document.querySelector('.nav-burger');
+    var menu   = document.querySelector('.mobile-menu');
+    if (!burger || !menu) return;
+
+    function openMenu() {
+      burger.classList.add('is-open');
+      menu.classList.add('is-open');
+      document.body.classList.add('menu-open');
+      burger.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+    }
+    function closeMenu() {
+      burger.classList.remove('is-open');
+      menu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+    }
+
+    burger.addEventListener('click', function() {
+      burger.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    menu.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() {
