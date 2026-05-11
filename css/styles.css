@@ -829,6 +829,7 @@ body.menu-open .nav-logo {
   letter-spacing: var(--tracking);
   line-height: var(--lh-tight);
   color: var(--color-ink);
+  text-align: center;
 }
 
 .process-sub {
@@ -838,6 +839,7 @@ body.menu-open .nav-logo {
   line-height: var(--lh-body);
   color: var(--color-mute);
   max-width: 520px;
+  text-align: center;
 }
 
 /* Accordion container */
