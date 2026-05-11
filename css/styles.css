@@ -391,6 +391,29 @@ body.menu-open .nav-logo {
   text-wrap: balance;
 }
 
+@keyframes hero-shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-shimmer {
+  background: linear-gradient(
+    90deg,
+    #35A86A 0%,
+    #61EAA0 30%,
+    #2E9A5F 55%,
+    #8DFFC4 75%,
+    #35A86A 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hero-shimmer 3.6s ease-in-out infinite;
+  display: inline;
+}
+
 .hero-sub {
   font-size: var(--fs-body);
   font-weight: 500;
