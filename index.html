@@ -474,20 +474,30 @@
     });
   });
 
-  // Process — horizontal accordion
+  // Process — horizontal accordion (hover on desktop, click on mobile)
   (function() {
     var accordion = document.querySelector('.process-accordion');
     if (!accordion) return;
     var panels = accordion.querySelectorAll('.process-panel');
+    var mq = window.matchMedia('(max-width: 640px)');
 
     panels.forEach(function(panel) {
+      panel.addEventListener('click', function() {
+        if (!mq.matches) return;
+        var isAlreadyActive = panel.classList.contains('is-active');
+        panels.forEach(function(p) { p.classList.remove('is-active'); });
+        if (!isAlreadyActive) panel.classList.add('is-active');
+      });
+
       panel.addEventListener('mouseenter', function() {
+        if (mq.matches) return;
         panels.forEach(function(p) { p.classList.remove('is-active'); });
         panel.classList.add('is-active');
       });
     });
 
     accordion.addEventListener('mouseleave', function() {
+      if (mq.matches) return;
       panels.forEach(function(p) { p.classList.remove('is-active'); });
       panels[0].classList.add('is-active');
     });
