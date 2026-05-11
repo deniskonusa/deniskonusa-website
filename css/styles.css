@@ -1225,7 +1225,7 @@ body.menu-open .nav-logo {
   }
 
   /* Nav */
-  .nav { padding: 20px var(--page-x) 0; gap: 12px; }
+  .nav { padding: 20px var(--page-x); gap: 12px; }
   .nav-logo-sym  { height: 36px; }
   .nav-logo-word { height: 32px; }
   .nav-links { display: none; }
