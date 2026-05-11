@@ -5,7 +5,7 @@
   <title>Denis Konusa — Brand Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A complete brand. Delivered in 14 days. Strategy, naming, logo, visual system, social templates, presentation, website, and brand guidelines — all in one sprint, at one fixed price.">
-  <link rel="stylesheet" href="css/styles.css?v=20260511c">
+  <link rel="stylesheet" href="css/styles.css?v=20260511d">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -477,7 +477,7 @@
     });
   });
 
-  // Sticky floating CTA — show after hero, hide when footer visible
+  // Sticky floating CTA — show after hero-cta scrolls away, hide when footer visible
   (function() {
     var stickyCta = document.querySelector('.sticky-cta');
     if (!stickyCta) return;
@@ -498,7 +498,7 @@
       footerVisible = entries[0].isIntersecting;
       update();
     }, { threshold: 0 });
-    var hero = document.querySelector('.hero');
+    var hero = document.querySelector('.hero-cta');
     var footer = document.querySelector('.footer');
     if (hero) heroObs.observe(hero);
     if (footer) footerObs.observe(footer);
