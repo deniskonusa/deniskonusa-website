@@ -556,12 +556,12 @@ body.menu-open .nav-logo {
   flex-direction: column;
   justify-content: space-between;
 }
-.value-card.alt { background: var(--color-surface-2); }
 
-.value-icon {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
+.value-icon-mat {
+  font-size: 36px;
+  line-height: 1;
+  color: var(--color-primary);
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }
 
 .value-title {
@@ -1189,15 +1189,6 @@ body.menu-open .nav-logo {
 
 .footer-social-link:hover { color: var(--color-primary); }
 
-/* ── Value-card symbol marker ─────────────────────────────── */
-
-.value-symbol {
-  font-size: 28px;
-  line-height: 1;
-  color: var(--color-primary);
-  margin-bottom: 12px;
-  display: inline-block;
-}
 
 /* ── Sticky floating CTA ──────────────────────────────────── */
 
@@ -1338,7 +1329,6 @@ body.menu-open .nav-logo {
     padding: 24px 20px;
     gap: 32px;
   }
-  .value-symbol { font-size: 24px; margin-bottom: 24px; }
   .value-title  { margin-bottom: 12px; }
 
   /* Projects */
