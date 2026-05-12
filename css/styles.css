@@ -770,6 +770,9 @@ body.menu-open .nav-logo {
 .deliverables {
   padding: 0 var(--page-x);
   list-style: none;
+}
+
+.deliverable:first-child {
   border-top: 1px solid var(--color-line);
 }
 
