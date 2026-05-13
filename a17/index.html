@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A17 — Brand Identity by Denis Konusa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A17 — logo and design system for a maritime growth marketing agency. Brand identity by Denis Konusa.">
+  <link rel="stylesheet" href="../css/styles.css?v=20260513d">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <style>
+    .case-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--fs-body);
+      font-weight: 500;
+      letter-spacing: var(--tracking);
+      color: var(--color-mute);
+      line-height: var(--lh-body);
+      transition: color var(--dur-base) var(--ease);
+    }
+    .case-back:hover { color: var(--color-primary); }
+    .case-back:hover .case-back-icon { transform: translateX(-4px); }
+    .case-back-icon {
+      display: inline-flex;
+      transition: transform var(--dur-base) var(--ease);
+    }
+
+    .case-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .case-cover video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .case-desc {
+      padding: var(--space-section-y) var(--page-x) 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-8);
+    }
+    .case-desc p {
+      font-size: var(--fs-body);
+      font-weight: 500;
+      line-height: var(--lh-body);
+      letter-spacing: var(--tracking);
+      color: var(--color-mute);
+      margin: 0;
+    }
+
+    .case-gallery {
+      padding: var(--space-section-y) var(--page-x) 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-4);
+    }
+    .case-tile {
+      width: 100%;
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .case-tile img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .case-desc { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 640px) {
+      .case-gallery { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Nav -->
+  <header class="nav">
+    <a href="../index.html" class="nav-logo" aria-label="Denis Konusa Brand Designer">
+      <img src="../assets/wordmark-black.svg" alt="Denis Konusa" class="nav-logo-word">
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../index.html#projects">projects</a></li>
+        <li><a href="../index.html#pricing">pricing</a></li>
+        <li><a href="../index.html#process">process</a></li>
+        <li><a href="../index.html#faq">faq</a></li>
+      </ul>
+    </nav>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span class="nav-burger-bar"></span>
+      <span class="nav-burger-bar"></span>
+      <span class="nav-burger-bar"></span>
+    </button>
+  </header>
+
+  <!-- Mobile fullscreen menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav aria-label="Mobile primary">
+        <ul class="mobile-nav-links">
+          <li style="--i:0"><a href="../index.html#about" class="mobile-nav-link">about</a></li>
+          <li style="--i:1"><a href="../index.html#projects" class="mobile-nav-link">projects</a></li>
+          <li style="--i:2"><a href="../index.html#pricing" class="mobile-nav-link">pricing</a></li>
+          <li style="--i:3"><a href="../index.html#process" class="mobile-nav-link">process</a></li>
+          <li style="--i:4"><a href="../index.html#faq" class="mobile-nav-link">faq</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-bottom">
+        <div class="mobile-social">
+          <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://www.instagram.com/deniskonusa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/denis-konusa-873605304/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/deniskonusa" target="_blank" rel="noopener noreferrer">Behance</a>
+        </div>
+        <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer" class="btn btn-primary">get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Hero -->
+  <section class="hero">
+    <a href="../index.html#projects" class="case-back">
+      <span class="case-back-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11.25 4.5L6.75 9l4.5 4.5"/>
+        </svg>
+      </span>
+      <span>go back</span>
+    </a>
+
+    <h1 class="hero-headline">A17</h1>
+    <p class="hero-sub">Logo and design system for a growth marketing agency.</p>
+
+    <figure class="case-cover">
+      <video src="../assets/a17-logo-animation.mp4" autoplay muted loop playsinline></video>
+    </figure>
+  </section>
+
+  <!-- 3-column description -->
+  <section class="case-desc">
+    <p>A17 is a growth marketing agency focused exclusively on the maritime sector. The project brief called for building a brand identity from the ground up — starting with the logo and extending into a complete design system. The key challenge was to reflect the specifics of the industry while creating a visual identity that feels both credible and distinctive.</p>
+
+    <p>The logo concept is built around the fusion of two ideas — the A17 letterform and the silhouette of a ship. From this synthesis emerged a strict geometric mark: a triangular sail shape embedded into the structure of the characters, forming a single, indivisible symbol. No illustrative detail, no decoration — just clean geometry where the maritime reference reads naturally and without effort.</p>
+
+    <p>The design system is anchored by a deep teal brand color and a clean sans-serif typeface. It provides a consistent visual language across all brand touchpoints — from digital channels to print materials — ensuring the agency communicates with clarity and coherence at every scale.</p>
+  </section>
+
+  <!-- Image gallery — single column stack -->
+  <section class="case-gallery" aria-label="A17 project gallery">
+    <figure class="case-tile"><img src="../assets/black main logo.jpg" alt="A17 — black main logo"></figure>
+    <figure class="case-tile"><img src="../assets/white main logo.jpg" alt="A17 — white main logo"></figure>
+    <figure class="case-tile"><img src="../assets/primary colors.jpg" alt="A17 — primary colors"></figure>
+    <figure class="case-tile"><img src="../assets/secondary colors.jpg" alt="A17 — secondary colors"></figure>
+    <figure class="case-tile"><img src="../assets/typography.jpg" alt="A17 — typography"></figure>
+  </section>
+
+</div><!-- /.page -->
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+
+    <div class="footer-cta">
+      <h2 class="footer-cta-headline">Ready to launch your brand in <span class="hero-shimmer">14 days</span>?</h2>
+      <p class="footer-cta-body">Tell us about your project. We'll figure out together if a sprint is the right fit — no commitment required.</p>
+      <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer" class="btn btn-primary">get in touch</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Denis Konusa · Brand &amp; Communication Design</p>
+      <div class="footer-social">
+        <a href="https://t.me/dkonusa" class="footer-social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://www.instagram.com/deniskonusa/" class="footer-social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/denis-konusa-873605304/" class="footer-social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.behance.net/deniskonusa" class="footer-social-link" target="_blank" rel="noopener noreferrer">Behance</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Sticky floating CTA -->
+<a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer" class="btn btn-primary sticky-cta" aria-label="Get in touch">get in touch</a>
+
+<script>
+  // Mobile hamburger menu
+  (function() {
+    var burger = document.querySelector('.nav-burger');
+    var menu   = document.querySelector('.mobile-menu');
+    if (!burger || !menu) return;
+
+    function openMenu() {
+      burger.classList.add('is-open');
+      menu.classList.add('is-open');
+      document.body.classList.add('menu-open');
+      burger.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+    }
+    function closeMenu() {
+      burger.classList.remove('is-open');
+      menu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+    }
+
+    burger.addEventListener('click', function() {
+      burger.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    menu.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+
+  // Sticky floating CTA
+  (function() {
+    var stickyCta = document.querySelector('.sticky-cta');
+    if (!stickyCta) return;
+    var heroVisible = true;
+    var footerVisible = false;
+    function update() {
+      if (!heroVisible && !footerVisible) {
+        stickyCta.classList.add('is-visible');
+      } else {
+        stickyCta.classList.remove('is-visible');
+      }
+    }
+    var heroObs = new IntersectionObserver(function(entries) {
+      heroVisible = entries[0].isIntersecting;
+      update();
+    }, { threshold: 0 });
+    var footerObs = new IntersectionObserver(function(entries) {
+      footerVisible = entries[0].isIntersecting;
+      update();
+    }, { threshold: 0 });
+    var hero = document.querySelector('.hero');
+    var footer = document.querySelector('.footer');
+    if (hero) heroObs.observe(hero);
+    if (footer) footerObs.observe(footer);
+  })();
+</script>
+</body>
+</html>
