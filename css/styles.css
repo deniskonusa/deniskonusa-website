@@ -620,12 +620,23 @@ body.menu-open .nav-logo {
   row-gap: 60px;
 }
 
+.project {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 420ms cubic-bezier(.16, 1, .3, 1);
+  will-change: transform;
+}
+.project:hover { transform: translateY(-6px); }
+
 .project-art {
   aspect-ratio: 685 / 400;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  transition: transform 620ms cubic-bezier(.16, 1, .3, 1);
 }
+.project:hover .project-art { transform: scale(1.02); }
 
 .project-meta {
   padding-top: 24px;
@@ -640,7 +651,24 @@ body.menu-open .nav-logo {
   letter-spacing: var(--tracking);
   line-height: var(--lh-tight);
   color: var(--color-ink);
+  position: relative;
+  align-self: flex-start;
+  transition: color 320ms cubic-bezier(.16, 1, .3, 1);
 }
+.project-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1.5px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 420ms cubic-bezier(.16, 1, .3, 1);
+}
+.project:hover .project-name { color: var(--color-primary); }
+.project:hover .project-name::after { transform: scaleX(1); }
 
 .project-scope {
   font-size: var(--fs-body);
