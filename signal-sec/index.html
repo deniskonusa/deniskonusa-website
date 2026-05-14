@@ -5,7 +5,7 @@
   <title>Signal Sec — Brand Identity by Denis Konusa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Signal Sec — brand identity for a global crypto security conference. Logo, design system, website, and event communication by Denis Konusa.">
-  <link rel="stylesheet" href="../css/styles.css?v=20260513d">
+  <link rel="stylesheet" href="../css/styles.css?v=20260514a">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -83,6 +83,10 @@
   </style>
 </head>
 <body>
+
+<div class="preloader" aria-hidden="true">
+  <span class="preloader-count">0%</span>
+</div>
 
 <div class="page">
 
@@ -211,6 +215,30 @@
 <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer" class="btn btn-primary sticky-cta" aria-label="Get in touch">get in touch</a>
 
 <script>
+  // Preloader
+  (function() {
+    var overlay = document.querySelector('.preloader');
+    var counter = document.querySelector('.preloader-count');
+    if (!overlay || !counter) return;
+    var duration = 1600;
+    var startTime = null;
+    function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+    function tick(ts) {
+      if (!startTime) startTime = ts;
+      var p = Math.min((ts - startTime) / duration, 1);
+      counter.textContent = Math.floor(ease(p) * 99) + '%';
+      if (p < 1) { requestAnimationFrame(tick); }
+      else {
+        counter.textContent = '99%';
+        setTimeout(function() {
+          overlay.classList.add('is-done');
+          setTimeout(function() { overlay.remove(); }, 360);
+        }, 40);
+      }
+    }
+    requestAnimationFrame(tick);
+  })();
+
   // Mobile hamburger menu
   (function() {
     var burger = document.querySelector('.nav-burger');
