@@ -84,10 +84,6 @@
 </head>
 <body>
 
-<div class="preloader" aria-hidden="true">
-  <span class="preloader-count">0%</span>
-</div>
-
 <div class="page">
 
   <!-- Nav -->
@@ -203,30 +199,6 @@
 <a href="https://t.me/dkonusa" target="_blank" rel="noopener noreferrer" class="btn btn-primary sticky-cta" aria-label="Get in touch">get in touch</a>
 
 <script>
-  // Preloader
-  (function() {
-    var overlay = document.querySelector('.preloader');
-    var counter = document.querySelector('.preloader-count');
-    if (!overlay || !counter) return;
-    var duration = 1600;
-    var startTime = null;
-    function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
-    function tick(ts) {
-      if (!startTime) startTime = ts;
-      var p = Math.min((ts - startTime) / duration, 1);
-      counter.textContent = Math.floor(ease(p) * 99) + '%';
-      if (p < 1) { requestAnimationFrame(tick); }
-      else {
-        counter.textContent = '99%';
-        setTimeout(function() {
-          overlay.classList.add('is-done');
-          setTimeout(function() { overlay.remove(); }, 360);
-        }, 40);
-      }
-    }
-    requestAnimationFrame(tick);
-  })();
-
   // Mobile hamburger menu
   (function() {
     var burger = document.querySelector('.nav-burger');
