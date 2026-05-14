@@ -1475,3 +1475,27 @@ body.menu-open .nav-logo {
   }
   .footer-social { gap: var(--s-5); flex-wrap: wrap; }
 }
+
+/* ─── Preloader ─── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.preloader.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader-count {
+  position: absolute;
+  bottom: 48px;
+  left: var(--page-x, 30px);
+  font-size: clamp(72px, 11vw, 150px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #222;
+  font-variant-numeric: tabular-nums;
+}
